@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* styles.css */
+body {
+	padding-top: 60px;
+	background-color: #f8f9fa;
+}
+
+.container {
+	max-width: 800px;
+}
+
+h2, h3, h4 {
+	margin-top: 30px;
+}
+
+/* Navbar background */
+nav {
+	background-color: #343a40;
+}
+
+/* Base nav link style */
+nav a {
+	color: white !important;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+	color: #ffc107 !important; /* Yellow on hover */
+	text-decoration: underline;
+}
+
+/* Active link (when clicked) */
+nav a:active {
+	color: #ff5722 !important; /* Orange while active/clicked */
+}
+
+/* Visited link (if the browser registers it) */
+nav a:visited {
+	color: #c8e6c9 !important; /* Light green (for demo) */
+}
+
+/* External box class (unchanged from your version) */
+.external-style {
+	border: 2px solid #007bff;
+	background-color: #e6f2ff;
+	color: #003366;
+	padding: 15px;
+	margin-top: 10px;
+	font-weight: bold;
+	border-radius: 8px;
+}

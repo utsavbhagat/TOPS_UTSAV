@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>example.HelloServlet</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/HelloServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfigExampleServlet</servlet-name>
+		<servlet-class>servlet.ConfigExampleServlet</servlet-class>
+
+		<!-- Initialization Parameters -->
+		<init-param>
+			<param-name>developerName</param-name>
+			<param-value>Utsav Bhagat</param-value>
+		</init-param>
+		<init-param>
+			<param-name>institute</param-name>
+			<param-value>Tops Technology</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ConfigExampleServlet</servlet-name>
+		<url-pattern>/ConfigExampleServlet</url-pattern>
+	</servlet-mapping>
+	<!-- Welcome Page -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- RegisterServlet -->
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>example.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Login Servlet -->
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>example.UserLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/UserLoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Submit Servlet -->
+	<servlet>
+		<servlet-name>SubmitServlet</servlet-name>
+		<servlet-class>example.SubmitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitServlet</servlet-name>
+		<url-pattern>/SubmitServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Logout Servlet -->
+	<servlet>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<servlet-class>example.UserLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<url-pattern>/UserLogoutServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Filter for Input Validation -->
+	<filter>
+		<filter-name>InputValidationFilter</filter-name>
+		<filter-class>example.InputValidationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>InputValidationFilter</filter-name>
+		<url-pattern>/SubmitServlet</url-pattern>
+	</filter-mapping>
+</web-app>
